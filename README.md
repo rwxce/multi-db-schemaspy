@@ -1,6 +1,6 @@
 # SchemaSpy Docker for Informix and other DBs
 
-**SchemaSpy Docker for Informix and other DB** is a Docker-based project designed to generate documentation for **Informix databases** using [SchemaSpy](https://schemaspy.org/).
+**SchemaSpy Docker** is a Docker-based project designed to generate documentation for **Informix databases and other DBs** using [SchemaSpy](https://schemaspy.org/).
 It simplifies connecting to, analyzing, and visualizing the structure of an Informix database — all inside a lightweight, dependency-free container.
 
 ---
