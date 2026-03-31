@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Databases Overview</title>
+    <title>Databases by Server</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
 
-    <!-- Styles -->
     <link rel="stylesheet" href="./bower/admin-lte/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./bower/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./bower/ionicons/css/ionicons.min.css">
@@ -20,63 +19,53 @@
     <link rel="stylesheet" href="./bower/salvattore/salvattore.css">
     <link rel="stylesheet" href="./bower/admin-lte/dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="./schemaSpy.css">
-
-    <!--[if lt IE 9]>
-    <script src="/bower/html5shiv/html5shiv.min.js"></script>
-    <script src="/bower/respond/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body class="hold-transition skin-blue layout-top-nav">
     <div class="wrapper">
       <div class="content-wrapper">
-        <!-- Header -->
         <section class="content-header">
           <div class="callout callout-info">
-            <h4>SchemaSpy – Global Databases Overview</h4>
-            <p>Generated on Fri Oct 24 13:37 UTC 2025</p>
+            <h4>SchemaSpy - Databases by Server</h4>
+            <p>Select a server to list all its internal databases.</p>
           </div>
         </section>
 
-        <!-- Main content -->
         <section class="content">
-          <!-- Summary Box -->
+          <div id="status-message" class="alert alert-danger" style="display:none;"></div>
+
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Available Databases</h3>
+              <h3 class="box-title">Server Selector</h3>
               <span class="label label-primary pull-right"><i class="fa fa-server fa-2x"></i></span>
             </div>
             <div class="box-body">
-              <table
-                id="database_overview"
-                class="table table-bordered table-striped dataTable"
-                role="grid"
-                data-paging="true"
-                data-page-length="50"
-                data-length-change="false">
+              <div class="form-group">
+                <label for="server-selector">Server</label>
+                <select id="server-selector" class="form-control"></select>
+              </div>
+            </div>
+          </div>
+
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Available Databases</h3>
+            </div>
+            <div class="box-body">
+              <table class="table table-bordered table-striped dataTable" role="grid">
                 <thead>
                   <tr>
-                    <th valign="bottom">Database</th>
-                    <th valign="bottom">Description</th>
+                    <th>Database</th>
+                    <th>Description</th>
                   </tr>
                 </thead>
-
-                <!-- Databases Link -->
-                    <tbody>
-                    <tr class="tbl even" valign="top">
-                        <td class="detail"><a href="../output/analytics/index.html">analytics</a></td>
-                        <td class="comment detail" style="display: table-cell;">
-                        <p>Analytics Database</p>
-                        </td>
-                    </tr>
-                    </tbody>
+                <tbody id="database-table-body"></tbody>
               </table>
             </div>
           </div>
         </section>
       </div>
 
-      <!-- Footer -->
       <footer class="main-footer">
         <div>
           <div class="pull-right hidden-xs">
@@ -88,27 +77,7 @@
       </footer>
     </div>
 
-    <!-- Scripts -->
-    <script src="./bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
-    <script src="./bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
-    <script src="./bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./bower/datatables.net/jquery.dataTables.min.js"></script>
-    <script src="./bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <script src="./bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
-    <script src="./bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-    <script src="./bower/datatables.net-buttons/buttons.html5.min.js"></script>
-    <script src="./bower/datatables.net-buttons/buttons.print.min.js"></script>
-    <script src="./bower/datatables.net-buttons/buttons.colVis.min.js"></script>
-    <script src="./bower/js-xlsx/xlsx.full.min.js"></script>
-    <script src="./bower/pdfmake/pdfmake.min.js"></script>
-    <script src="./bower/pdfmake/vfs_fonts.js"></script>
-    <script src="./bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <script src="./bower/admin-lte/plugins/fastclick/fastclick.js"></script>
-    <script src="./bower/salvattore/salvattore.min.js"></script>
-    <script src="./bower/anchor-js/anchor.min.js"></script>
-    <script src="./bower/codemirror/codemirror.js"></script>
-    <script src="./bower/codemirror/sql.js"></script>
-    <script src="./bower/admin-lte/dist/js/app.min.js"></script>
-    <script src="./schemaSpy.js"></script>
+    <script src="./data/catalog.data.js"></script>
+    <script src="./catalog.js"></script>
   </body>
 </html>
