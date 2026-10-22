@@ -126,10 +126,3 @@ It simplifies connecting to, analyzing, and visualizing the structure of an Info
 
 This project is licensed under the **MIT License**.
 See the [LICENSE](LICENSE) file for more details.
-
----
-
-## 📬 Contact
-
-For questions or suggestions, contact:
-**[148581386+rwxce@users.noreply.github.com](mailto:148581386+rwxce@users.noreply.github.com)**
